@@ -1,0 +1,39 @@
+{
+  "name": "deskpet",
+  "productName": "DeskPet",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Desktop pets that walk around your Mac screen",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "icons": "python3 scripts/generate-icons.py",
+    "dist": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "dev.sathish.deskpet",
+    "productName": "DeskPet",
+    "files": [
+      "electron/**/*",
+      "renderer/**/*",
+      "icons/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "icon": "icons/icon.png",
+      "target": [
+        "dir",
+        "dmg"
+      ],
+      "identity": null
+    }
+  }
+}

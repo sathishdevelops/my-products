@@ -1,0 +1,24 @@
+{
+  "name": "pixelcheck",
+  "private": true,
+  "version": "1.0.0",
+  "description": "One-click tracking audit Chrome extension with client-ready PDF",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --config vite.config.ts",
+    "build": "vite build --config vite.config.ts",
+    "demo": "python3 -m http.server 4173 --directory .",
+    "license": "node scripts/generate-license.mjs",
+    "icons": "python3 scripts/generate-icons.py",
+    "pack": "npm run build && mkdir -p store && rm -f store/pixelcheck.zip && cd dist && zip -r ../store/pixelcheck.zip ."
+  },
+  "dependencies": {
+    "jspdf": "^2.5.2"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.3",
+    "@types/chrome": "^0.0.287",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  }
+}

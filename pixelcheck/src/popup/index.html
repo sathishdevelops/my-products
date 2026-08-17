@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PixelCheck</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <strong>PixelCheck</strong>
+        <p class="muted" id="subtitle">Scanning this tab…</p>
+      </div>
+      <span class="pill" id="license-pill">Trial</span>
+    </header>
+
+    <section id="error" class="banner hidden"></section>
+
+    <section id="summary" class="summary hidden"></section>
+
+    <ul id="findings" class="findings"></ul>
+
+    <footer class="actions">
+      <button type="button" id="rescan">Rescan</button>
+      <button type="button" class="primary" id="export" disabled>Export PDF</button>
+    </footer>
+
+    <section class="license-box">
+      <label for="license-key">License key</label>
+      <div class="row">
+        <input id="license-key" type="text" placeholder="PC1.… paste after purchase" autocomplete="off" />
+        <button type="button" id="unlock">Unlock</button>
+      </div>
+        <p class="muted" id="license-msg">Free to scan. Optional $19 license removes the PDF watermark.</p>
+        <p class="muted"><a id="buy-link" href="https://gumroad.com/l/REPLACE_ME" target="_blank" rel="noreferrer">Get a license</a></p>
+    </section>
+
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Northwind Fitness — tracking demo (intentionally broken)</title>
+  </head>
+  <body>
+    <h1>Northwind Fitness</h1>
+    <p>Demo landing page for PixelCheck Looms. Duplicate Meta pixels, GTM, no UTMs, cookie banner without Consent Mode.</p>
+    <div id="onetrust-banner-sdk" style="position:fixed;bottom:0;left:0;right:0;padding:12px;background:#111;color:#fff;">
+      We use cookies. Accept / Reject (banner only — no Consent Mode).
+    </div>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script src="https://www.googletagmanager.com/gtm.js?id=GTM-DEMO12"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-DEMOGA4X"></script>
+    <script>
+      window.google_tag_manager = window.google_tag_manager || { "GTM-DEMO12": {} };
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-DEMOGA4X");
+    </script>
+    <script src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script>
+      window.fbq = window.fbq || function () {};
+      window.fbq.instance = {
+        pixelsByID: { "111111111111111": {}, "222222222222222": {} },
+      };
+      window.fbq("init", "111111111111111");
+      window.fbq("init", "222222222222222");
+    </script>
+    <script src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://analytics.tiktok.com/i18n/pixel/events.js"></script>
+    <script>
+      window.ttq = window.ttq || { load: function () {} };
+      window.ttq.load("C1DEMOPIXEL");
+    </script>
+  </body>
+</html>

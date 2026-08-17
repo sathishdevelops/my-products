@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PixelCheck — tracking audit PDF for ads agencies</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <span class="logo">PixelCheck</span>
+      <a class="buy" id="nav-buy" href="#buy">Get the license</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="kicker">Chrome extension · free to scan</p>
+        <h1>Stop sending Tag Assistant screenshots to clients.</h1>
+        <p class="lede">
+          Scan the current tab for GTM, GA4, Meta, TikTok, LinkedIn, Consent Mode, and UTMs.
+          Export a one-page PDF they can actually forward.
+        </p>
+        <div class="cta-row">
+          <a class="buy primary" id="hero-buy" href="#buy">Buy PixelCheck — $19</a>
+          <a class="ghost" href="./demo.html">Open the messy demo site</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article>
+          <h2>Duplicate pixels</h2>
+          <p>Two Meta IDs on one page is a paid fix. PixelCheck flags it in red so you can quote the work.</p>
+        </article>
+        <article>
+          <h2>Client-ready PDF</h2>
+          <p>Host, date, pass/warn/fail. Your name stays off the trial watermark once they buy a key.</p>
+        </article>
+        <article>
+          <h2>This tab only</h2>
+          <p>No crawl, no CAPI, no login to ad accounts. Open the landing URL, click, send the file.</p>
+        </article>
+      </section>
+
+      <section class="price" id="buy">
+        <h2>One license. Keep using it on every client site.</h2>
+        <p class="amount">$19 <span>/ ₹1,499</span></p>
+        <ol>
+          <li>Pay with the button below (Gumroad or Lemon Squeezy).</li>
+          <li>You receive a <code>PC1.</code> license key by email (or from the seller if you bought direct).</li>
+          <li>Load the unpacked extension, paste the key, export a clean PDF.</li>
+        </ol>
+        <a class="buy primary" id="checkout" href="#buy">Buy PixelCheck — $19</a>
+        <p class="fine">Install free from the Chrome Web Store. Scanning always works. The $19 license only removes the PDF watermark. PixelCheck does not show ads on websites.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>PixelCheck scans the page you have open. It does not store client sites on a server.</p>
+    </footer>
+
+    <script src="./config.js"></script>
+    <script>
+      const url = window.PIXELCHECK_CHECKOUT;
+      const label = window.PIXELCHECK_CHECKOUT_LABEL || "Buy PixelCheck — $19";
+      const isLemon = /lemonsqueezy\.com/i.test(url);
+      for (const id of ["nav-buy", "hero-buy", "checkout"]) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        el.textContent = label;
+        el.setAttribute("href", url);
+        if (isLemon) el.classList.add("lemonsqueezy-button");
+      }
+      if (isLemon) {
+        const s = document.createElement("script");
+        s.src = "https://assets.lemonsqueezy.com/lemon.js";
+        s.defer = true;
+        document.body.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

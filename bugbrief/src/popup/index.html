@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BugBrief</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <strong>BugBrief</strong>
+        <p class="muted" id="subtitle">Scan this tab for QA leftovers.</p>
+      </div>
+      <span class="pill ok">Free</span>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button type="button" class="tab on" data-tab="scan">Scan</button>
+      <button type="button" class="tab" data-tab="shot">Shot</button>
+      <button type="button" class="tab" data-tab="report">Report</button>
+      <button type="button" class="tab" data-tab="tools">Tools</button>
+    </nav>
+
+    <section id="error" class="banner hidden"></section>
+    <p id="toast" class="toast hidden"></p>
+
+    <section id="panel-scan" class="panel">
+      <section id="summary" class="summary hidden"></section>
+      <ul id="findings" class="findings"></ul>
+      <footer class="actions">
+        <button type="button" id="rescan">Rescan</button>
+        <button type="button" id="highlight">Highlight</button>
+        <button type="button" class="primary" id="copy-brief">Copy brief</button>
+      </footer>
+    </section>
+
+    <section id="panel-shot" class="panel hidden">
+      <p class="muted pad">Viewport is what you see. Full page scrolls and stitches. Last shot goes into the PDF.</p>
+      <footer class="actions">
+        <button type="button" id="shot-view">Viewport</button>
+        <button type="button" class="primary" id="shot-full">Full page</button>
+      </footer>
+      <img id="shot-preview" class="shot hidden" alt="Last screenshot" />
+      <footer class="actions">
+        <button type="button" id="shot-copy" disabled>Copy image</button>
+        <button type="button" id="shot-save" disabled>Download PNG</button>
+      </footer>
+    </section>
+
+    <section id="panel-report" class="panel hidden">
+      <label for="steps">Steps</label>
+      <textarea id="steps" rows="3" placeholder="1. Open checkout&#10;2. Click Pay"></textarea>
+      <label for="expected">Expected</label>
+      <textarea id="expected" rows="2" placeholder="Order confirmation"></textarea>
+      <label for="actual">Actual</label>
+      <textarea id="actual" rows="2" placeholder="500 error, empty cart"></textarea>
+      <footer class="actions">
+        <button type="button" id="copy-md">Copy markdown</button>
+        <button type="button" class="primary" id="export">Export PDF</button>
+      </footer>
+    </section>
+
+    <section id="panel-tools" class="panel hidden">
+      <p class="muted pad">Everyday QA on this tab. Window size uses the current Chrome window.</p>
+      <div class="data-grid" id="tool-grid">
+        <button type="button" data-tool="copy-url">Copy URL</button>
+        <button type="button" data-tool="copy-env">Copy env</button>
+        <button type="button" data-tool="copy-links">Copy links</button>
+        <button type="button" data-tool="duplicate">Duplicate tab</button>
+        <button type="button" data-tool="hard-reload">Hard reload</button>
+        <button type="button" data-tool="passwords">Show passwords</button>
+        <button type="button" data-tool="clickables">Outline controls</button>
+        <button type="button" data-tool="css">Disable CSS</button>
+        <button type="button" data-tool="clear-storage">Clear storage</button>
+        <button type="button" data-tool="phone">Phone 390</button>
+        <button type="button" data-tool="tablet">Tablet 768</button>
+        <button type="button" data-tool="desktop">Desktop 1440</button>
+        <button type="button" data-tool="restore-window">Restore window</button>
+      </div>
+      <p class="muted pad" style="margin-top: 12px">Test data — focus a field on the page, then Fill.</p>
+      <div id="data-grid" class="data-grid"></div>
+      <p class="mono" id="data-preview"></p>
+      <footer class="actions">
+        <button type="button" id="copy-data">Copy</button>
+        <button type="button" class="primary" id="fill-data">Fill focused field</button>
+      </footer>
+    </section>
+
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DeskPet</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+    <form id="namer" class="namer hidden" autocomplete="off">
+      <label id="namer-label" for="name-input">Name this pet</label>
+      <input id="name-input" type="text" maxlength="18" />
+      <p>Return to save · Esc to cancel</p>
+    </form>
+    <div id="pet-menu" class="pet-menu hidden" role="menu">
+      <button type="button" data-act="rename">Rename</button>
+      <button type="button" data-act="pause">Pause</button>
+      <button type="button" data-act="remove">Remove</button>
+    </div>
+    <script src="./sprites.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
