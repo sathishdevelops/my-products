@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; }
+      .row { margin: 16px 0; }
+      button { min-width: 32px; min-height: 32px; }
+    </style>
+  </head>
+  <body>
+    <h2>Checkout leftover</h2>
+    <p>This demo is intentionally broken so BugBrief has something to fail.</p>
+    <img src="https://example.invalid/missing.png" alt="will fail" />
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
+    <div class="row">
+      <input type="email" placeholder="email with no label" />
+    </div>
+    <div class="row">
+      <label for="qty">Qty</label>
+      <input id="qty" type="number" />
+      <input id="qty" type="text" />
+    </div>
+    <div class="row">
+      <button type="button"></button>
+      <a href="https://example.com" target="_blank">Pay now</a>
+    </div>
+    <img src="http://example.com/mixed.jpg" alt="mixed" />
+    <script>
+      console.error("Payment widget failed: Stripe is not defined");
+      throw new Error("Demo checkout crashed");
+    </script>
+  </body>
+</html>

@@ -31,4 +31,7 @@ Run `npm run demo` and open `http://localhost:4174/landing/demo.html`.
 npm run pack
 ```
 
-Upload `store/bugbrief.zip`. Copy-paste fields from [`store/LISTING.md`](store/LISTING.md). Host [`landing/privacy.html`](landing/privacy.html) on HTTPS.
+Upload `store/bugbrief.zip`. Copy-paste fields from [`store/LISTING.md`](store/LISTING.md).
+
+Live site: https://sathishdevelops.github.io/bugbrief/  
+Privacy: https://sathishdevelops.github.io/bugbrief/privacy.html

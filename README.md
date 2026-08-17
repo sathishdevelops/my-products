@@ -2,7 +2,7 @@
 
 Indie products.
 
-- [bugbrief](bugbrief/) — Chrome extension for daily QA (scan, screenshots, bug brief, tester tools)
+- [bugbrief](https://github.com/sathishdevelops/bugbrief) — Chrome extension for daily QA ([site](https://sathishdevelops.github.io/bugbrief/))
 - [pixelcheck](pixelcheck/) — Chrome extension: one-click tracking audit PDF
 - [deskpet](deskpet/) — Mac menu-bar pets that walk on your desktop
 
@@ -10,8 +10,9 @@ Indie products.
 
 Repo: [sathishdevelops/my-products](https://github.com/sathishdevelops/my-products)
 
-BugBrief landing is served from `docs/` (GitHub Pages):
+BugBrief is also its own repo and Pages site:
 
-- Site: https://sathishdevelops.github.io/my-products/
-- Privacy (Chrome Web Store): https://sathishdevelops.github.io/my-products/privacy.html
-- Demo: https://sathishdevelops.github.io/my-products/demo.html
+- Repo: https://github.com/sathishdevelops/bugbrief
+- Site: https://sathishdevelops.github.io/bugbrief/
+- Privacy: https://sathishdevelops.github.io/bugbrief/privacy.html
+- Demo: https://sathishdevelops.github.io/bugbrief/demo.html
