@@ -42,7 +42,7 @@ BugBrief reads the current tab after you click. Console errors are collected in-
 - **Remote code:** No
 - **Data use:** Check **Website content** (DOM, console errors, URL, and optional screenshots on the active tab after the user clicks). Do not check location, health, or web history.
 - **Certification:** Not sold, not used for unrelated ads, limited use.
-- **Privacy policy URL:** after GitHub Pages is live, paste `https://<you>.github.io/my-products/privacy.html`. Host `landing/privacy.html` on HTTPS. Reviewers open it in Incognito.
+- **Privacy policy URL:** https://sathishdevelops.github.io/my-products/privacy.html
 
 ## Permission justifications
 

@@ -6,9 +6,12 @@ Indie products.
 - [pixelcheck](pixelcheck/) — Chrome extension: one-click tracking audit PDF
 - [deskpet](deskpet/) — Mac menu-bar pets that walk on your desktop
 
-## BugBrief on GitHub Pages
+## GitHub
 
-After this repo is on GitHub, the landing and privacy policy are published from `bugbrief/landing/`:
+Repo: [sathishdevelops/my-products](https://github.com/sathishdevelops/my-products)
 
-- Site: `https://<you>.github.io/my-products/`
-- Privacy (Chrome Web Store): `https://<you>.github.io/my-products/privacy.html`
+BugBrief landing is served from `docs/` (GitHub Pages):
+
+- Site: https://sathishdevelops.github.io/my-products/
+- Privacy (Chrome Web Store): https://sathishdevelops.github.io/my-products/privacy.html
+- Demo: https://sathishdevelops.github.io/my-products/demo.html
